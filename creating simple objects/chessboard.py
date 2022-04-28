@@ -12,7 +12,7 @@ for i in range(8):
 	for j in range(8):
 		# we created a cube with dimensions 1 1 1
 		box_shp = BRepPrimAPI_MakeBox(
-			1, 1, 1
+			1, 0.2, 1
 		).Shape()
 		# We define the angle of rotation and the axis of rotation
 		angle_x = 0
