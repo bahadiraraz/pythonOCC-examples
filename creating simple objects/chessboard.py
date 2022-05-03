@@ -14,17 +14,10 @@ for i in range(8):
 		box_shp = BRepPrimAPI_MakeBox(
 			1, 0.2, 1
 		).Shape()
-		# We define the angle of rotation and the axis of rotation
-		angle_x = 0
-		angle_y = 0
-		angle_z = 0
 		# We enter the values in degrees and enter the object we want to rotate into the parameters
-		rotated_box = rotate_shp_3_axis(box_shp, angle_x, angle_y, angle_z, "deg")
-		tr_x = j
-		tr_y = 0
-		tr_z = i
+		rotated_box = rotate_shp_3_axis(box_shp, 0, 0, 0, "deg")
 		# We enter the values what we want to translate on the plane.
-		trans_box = translate_shp(rotated_box, gp_Vec(tr_x, tr_y, tr_z))
+		trans_box = translate_shp(rotated_box, gp_Vec(j, 0, i))
 		if i % 2 == 0:
 			if j % 2 == 0:
 				color = white
